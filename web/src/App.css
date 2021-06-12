@@ -1,0 +1,196 @@
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 30px;
+  min-height: 30rem;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px;
+  background: transparent;
+  border-radius: 5px;
+}
+
+.render-chat {
+  max-width: 350px;
+  border-radius: 5px;
+  padding: 20px;
+  box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+}
+
+h3 {
+  color: #2f72da;
+}
+
+span {
+  color: black;
+}
+
+.app {
+  display: grid;
+  place-items: center;
+  background-color: #dadbd3;
+  height: 100vh;
+}
+
+.app_body {
+  /* display: flex; */
+  background-color: #ededed;
+  /* margin-top: -50px; */
+  height: 90vh;
+  width: 60vw;
+  box-shadow: -1px 4px 20px -6px rgba(0, 0, 0, 0.7);
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-radius: 30px;
+}
+
+
+
+.chat__title {
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  border: 3px solid black;
+  background-color: black;
+  margin-right: -12px;
+  margin-left: -12px;
+  padding: 15px 0;
+  border-top-right-radius: 30px;
+  border-top-left-radius: 30px;
+  color: white;
+}
+
+.chat__area {
+  width: 100%;
+  /* border: 3px solid red; */
+  height: 75vh;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background-image: url("https://support.delta.chat/uploads/default/768ded5ffbef90faa338761be1c5633d91cc35e3");
+}
+
+.input__area {
+  width: 100%;
+  height: 15vh;
+  display: flex;
+  align-items: center;
+
+}
+
+.scroll {
+  height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+}
+
+.input__name__area {
+  margin: auto;
+
+}
+
+.input__name__area input {
+  margin: auto;
+  border-radius: 50px;
+  height: 50px;
+
+}
+
+.input__message__area {
+  margin: auto;
+
+}
+
+.input__message__area>input {
+  border-radius: 20px;
+  height: 50px;
+  text-indent: 2px;
+  word-wrap: break-word;
+}
+
+.input__button__area {
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.input__button__area button {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1.1rem;
+}
+
+
+
+
+.message__area {
+  border-radius: 1rem;
+  background-color: rgba(47, 114, 218, 0.6);
+  padding: 15px 8px 15px 10px;
+  border: 1px solid black;
+  margin: 7px 0;
+  box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+
+}
+
+.message__area__name {
+  font-weight: 600;
+}
+
+.message__area__text {
+  font-weight: 400;
+  font-style: italic;
+  word-wrap: break-word;
+}
+
+
+@media screen and (max-width: 992px) {
+
+  .app_body {
+    background-color: #ededed;
+    height: 98vh;
+    width: 93vw;
+  }
+
+  .input__area {
+    height: 30vh;
+  }
+
+  .chat__area {
+
+    height: 60vh;
+
+  }
+
+  .scroll {
+    height: 46.5vh;
+
+  }
+
+
+  .input__name__area {
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+  }
+
+  .input__message__area {
+    margin-bottom: 20px;
+
+  }
+
+  .input__button__area button {
+    margin-bottom: -30px;
+    margin-top: -20px;
+    width: 100%;
+
+  }
+
+}
