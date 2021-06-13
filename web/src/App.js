@@ -9,7 +9,8 @@ function App() {
   const socketRef = useRef();
 
   useEffect(() => {
-    socketRef.current = io.connect("http://localhost:4000");
+    // socketRef.current = io.connect("http://localhost:4000");
+    socketRef.current = io.connect("https://murmuring-mountain-20587.herokuapp.com/");
     socketRef.current.on("message", ({ name, message }) => {
       setChat([...chat, { name, message }]);
       var elem = document.getElementsByClassName("scroll")[0];
