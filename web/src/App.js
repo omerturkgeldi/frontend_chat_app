@@ -10,7 +10,9 @@ function App() {
 
   useEffect(() => {
     // socketRef.current = io.connect("http://localhost:4000");
-    socketRef.current = io.connect("https://murmuring-mountain-20587.herokuapp.com/");
+    socketRef.current = io.connect(
+      "https://murmuring-mountain-20587.herokuapp.com/"
+    );
     socketRef.current.on("message", ({ name, message }) => {
       setChat([...chat, { name, message }]);
       var elem = document.getElementsByClassName("scroll")[0];
@@ -30,14 +32,38 @@ function App() {
     setState({ message: "", name });
   };
 
+  // chat.map(({ name, message }, index) => {
+  //   name == state.name ? console.log("xxx") : console.log("yyy");
+  //   return (
+  //     <div className="message__area" key={index}>
+  //       <h5>
+  //         <span className="message__area__name">{name}: </span>
+  //         <span className="message__area__text">{message}</span>
+  //       </h5>
+  //     </div>
+  //   );
+  // });
+
   const renderChat = () => {
+    const currentUser = state.name;
     return chat.map(({ name, message }, index) => (
-      <div className="message__area" key={index}>
-        <h5>
-          <span className="message__area__name">{name}: </span>
-          <span className="message__area__text">{message}</span>
-        </h5>
-      </div>
+      <>
+        {currentUser == name ? (
+          <div className="message__area__self" key={index}>
+            <h5>
+              <span className="message__area__name">{name}: </span>
+              <span className="message__area__text">{message}</span>
+            </h5>
+          </div>
+        ) : (
+          <div className="message__area" key={index}>
+            <h5>
+              <span className="message__area__name">{name}: </span>
+              <span className="message__area__text">{message}</span>
+            </h5>
+          </div>
+        )}
+      </>
     ));
   };
 

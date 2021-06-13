@@ -86,7 +86,7 @@ span {
 }
 
 .scroll {
-  height: 60vh;
+  height: 61vh;
   overflow-x: hidden;
   overflow-y: auto;
 
@@ -133,11 +133,25 @@ span {
 .message__area {
   border-radius: 1rem;
   background-color: rgba(47, 114, 218, 0.6);
-  padding: 15px 8px 15px 10px;
+  padding: 15px 15px 15px 15px;
   border: 1px solid black;
-  margin: 7px 0;
+  margin: 6px 10px;
   box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+  /* display: inline-block; */
+  clear:both;
+  float:left;
+}
 
+.message__area__self{
+  border-radius: 1rem;
+  background-color: rgba(91, 226, 64, 0.6);
+  padding: 15px 15px 15px 15px;
+  border: 1px solid black;
+  margin: 6px 10px;
+  box-shadow: 0px 3px 24px -8px rgba(0, 0, 0, 0.75);
+  /* display: inline-block; */
+  clear:both;
+  float:right;
 }
 
 .message__area__name {
@@ -146,8 +160,10 @@ span {
 
 .message__area__text {
   font-weight: 400;
-  font-style: italic;
+  /* font-style: italic; */
   word-wrap: break-word;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
 }
 
 
@@ -160,17 +176,17 @@ span {
   }
 
   .input__area {
-    height: 30vh;
+    height: 25vh;
   }
 
   .chat__area {
 
-    height: 60vh;
+    height: 65vh;
 
   }
 
   .scroll {
-    height: 46.5vh;
+    height: 51vh;
 
   }
 
@@ -193,4 +209,17 @@ span {
 
   }
 
+  .message__area__name {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  
+  .message__area__text {
+    font-weight: 400;
+    /* font-style: italic; */
+    word-wrap: break-word;
+    line-height: 1.4;
+    font-size: 16px;
+    letter-spacing: 0;
+  }
 }
