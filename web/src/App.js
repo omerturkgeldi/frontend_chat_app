@@ -48,7 +48,7 @@ function App() {
     const currentUser = state.name;
     return chat.map(({ name, message }, index) => (
       <>
-        {currentUser == name ? (
+        {currentUser === name ? (
           <div className="message__area__self" key={index}>
             <h5>
               <span className="message__area__name">{name}: </span>
